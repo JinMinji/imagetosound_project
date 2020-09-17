@@ -7,18 +7,18 @@ import javax.swing.JPanel;
 
 										//ItemListener!!!
 public class CardTest extends Frame implements ItemListener {
-	private Panel body, ps[]; //panel chioce½Ã, index·Î ¸ÅÄªÇÏ±â À§ÇØ ¹è¿­°´Ã¼·Î ¼³Á¤
+	private Panel body, ps[]; //panel chioceì‹œ, indexë¡œ ë§¤ì¹­í•˜ê¸° ìœ„í•´ ë°°ì—´ê°ì²´ë¡œ ì„¤ì •
 	private Choice choice;
 	private CardLayout card;
 	private int selected;
 	JPanel main;
 	
 	
-	// card layout È°¿ë¾È! ¸Ş´º¼±ÅÃ°ú °°Àº »óÈ²¿¡ Àû¿ëÇÏ±â ÁÁÀº ¹æ¹ı!
-	// tap°ú ´Ş¸® È­¸é ±¸¼ºÀÌ ±ò²ûÇÏ´Ù´Â ÀåÁ¡.
+	// card layout í™œìš©ì•ˆ! ë©”ë‰´ì„ íƒê³¼ ê°™ì€ ìƒí™©ì— ì ìš©í•˜ê¸° ì¢‹ì€ ë°©ë²•!
+	// tapê³¼ ë‹¬ë¦¬ í™”ë©´ êµ¬ì„±ì´ ê¹”ë”í•˜ë‹¤ëŠ” ì¥ì .
 	
 	public CardTest() {
-		super("Ä«µå ·¹ÀÌ¾Æ¿ô");
+		super("ì¹´ë“œ ë ˆì´ì•„ì›ƒ");
 		body = new Panel();
 		body.setLayout(card = new CardLayout());
 		MouseHandler handler = new MouseHandler();
@@ -64,7 +64,7 @@ public class CardTest extends Frame implements ItemListener {
 		}
 	}
 	
-	//window ´İÈ÷µµ·Ï Ãß°¡ÇØÁØ ÄÚµå - Swing¿¡¼­´Â µğÆúÆ®·Î ÀÖÀ½
+	//window ë‹«íˆë„ë¡ ì¶”ê°€í•´ì¤€ ì½”ë“œ - Swingì—ì„œëŠ” ë””í´íŠ¸ë¡œ ìˆìŒ
 	public class WindowHandler extends WindowAdapter {
 		public void windowClosing(WindowEvent e) {
 			setVisible(false);

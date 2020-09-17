@@ -27,7 +27,7 @@ public class Bug_Catch extends JFrame {
 	public Bug_Catch() {
 		super("Bug Cathing Game");
 		ths = new Thread[bugs.length];
-		// carÀÇ °¹¼ö ¸¸Å­ Thread¸¦ ¸¸µé¾î¶ó.
+		// Bugì˜ ê°œìˆ˜ë§Œí¼ Threadë¥¼ ë§Œë“¤ì–´ë¼
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 10, 1024, 700);
@@ -36,7 +36,7 @@ public class Bug_Catch extends JFrame {
 		setContentPane(contentPane);
 		
 		menuPanel = new JPanel();
-		//1Çà 4¿­ 5°³·Î ³ª´«´Ù
+		//1í–‰ 4ì—´ 5ê°œë¡œ ë‚˜ëˆˆë‹¤.
 		startBt = new JButton(new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\car\\play.png"));
 		
 		menuPanel.add(startBt);

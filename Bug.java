@@ -7,7 +7,7 @@ import java.awt.*;
 public class Bug extends JButton implements Runnable{
 	private ImageIcon name;
 	JPanel pan = new JPanel();
-	private int x, y; // À§Ä¡ °ª
+	private int x, y; // ìœ„ì¹˜ ê°’
 
 	public Bug(ImageIcon name, int x, int y) {
 		this.name = name;
@@ -18,8 +18,8 @@ public class Bug extends JButton implements Runnable{
 	}	
 	
 	public void run() {
-		// TODO x, y °ªÀ» ¹Ş¾Æ¼­ ¹Ù²ãÁà¾ßÇÔ.
-		// Car°¡ ´Ş¸®´Â ºÎºĞ
+		// TODO x, y ê°’ì„ ë°›ì•„ì„œ ë°”ê¿”ì¤˜ì•¼í•¨.
+		// Bugê°€ ì›€ì§ì´ëŠ” ë¶€ë¶„
 		while (true) {
 			int move = (int)(Math.random()%4);
 			switch (move) {
@@ -31,13 +31,13 @@ public class Bug extends JButton implements Runnable{
 
 			//this.setBounds(x,y,130,200);
 			
-			// Car¸¶´Ù ¼­·Î ´Ù¸¥ ÀÓÀÇÀÇ ÀÎÅÍ¹úÀ» °¡Áø´Ù.
+			// Bug ë§ˆë‹¤ ì„œë¡œ ë‹¤ë¥¸ ì„ì˜ì˜ì¸í„°ë²Œì„ ê°€ì§„ë‹¤.
 			try {
 				Thread.sleep((int)(Math.random()));
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}// Car °æ±â Á¾·á
+		}// ì¢…ë£Œ
 	}
 }

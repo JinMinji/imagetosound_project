@@ -27,22 +27,22 @@ public class Death_bug extends JButton implements Runnable{
 	}
    
 	public void run() {
-		// TODO x, y °ªÀ» ¹Ş¾Æ¼­ ¹Ù²ãÁà¾ßÇÔ.
-		// ¸ó½ºÅÍ°¡ ´Ş¸®´Â ºÎºĞ
+		// TODO x, y ê°’ì„ ë°›ì•„ì„œ ë°”ê¿”ì¤˜ì•¼í•¨.
+		// ëª¬ìŠ¤í„°ê°€ ë‹¬ë¦¬ëŠ” ë¶€ë¶„
 		for (int i=0 ; i < 10000 ; i++) {
-			// ¿©±â¼­ ¹İº¹¹® break Á¶°ÇÀ» ½Ã°£Á¦ÇÑÀ¸·Î ÁÖ¸é µÉ µí
+			// ì—¬ê¸°ì„œ ë°˜ë³µë¬¸ breakì¡°ê±´ì„ ì‹œê°„ì œí•œìœ¼ë¡œ ì£¼ë©´ ë  ë“¯
 			speed = (int)(Math.random() * 50);
 			y += 10;
-			// ¸ó½ºÅÍ ¿òÁ÷ÀÌ°Ô ÇÏ´Â ºÎºĞ
+			// ëª¬ìŠ¤í„° ì›€ì§ì´ê²Œ í•˜ëŠ” ë¶€ë¶„
 			this.setBounds(x,y,50,50);
-			// ¸ó½ºÅÍ ¸¶´Ù ¼­·Î ´Ù¸¥ ÀÓÀÇÀÇ ÀÎÅÍ¹úÀ» °¡Áø´Ù.
+			// ëª¬ìŠ¤í„°ë§ˆë‹¤ ì„œë¡œ ë‹¤ë¥¸ ì„ì˜ì˜ ì¸í„°ë²Œì„ê°€ì§„ë‹¤.
 			try {
 				Thread.sleep((int)(Math.random()*300));
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}// ÀâÁö ¸øÇßÀ» ‹š 
+		}// ì¡ì§€ ëª»í–ˆì„ ë•Œ
 	}
 		   
 

@@ -104,7 +104,7 @@ public class KillBug extends JFrame{
 	JPanel centerPanel;
    
 	BufferedImage img = null;
-	// ÀÏ´Ü ¹Ù´ÚÂÊ¿¡
+	// ì¼ë‹¨ ë°”ë‹¥ìª½ì—
 	int img_x = 800;
 	int img_y = 800;
 	Thread[] ths;
@@ -116,7 +116,7 @@ public class KillBug extends JFrame{
 	{
 		super("Bug Catching Game");	
 		
-		// Å¸ÀÌ¸Ó ½º·¹µåµµ Ãß°¡
+		// íƒ€ì´ë¨¸ ìŠ¤ë ˆë“œë„ ì¶”ê°€
 		//ths = new Thread[bugs.length*2];
 		ths = new Thread[bugs.length*2 + 1];
 		
@@ -145,7 +145,7 @@ public class KillBug extends JFrame{
 		scrollPane = new JScrollPane(centerPanel);
 		menuPanel = new JPanel();
 		menuPanel.setLayout(new GridLayout(1,4,5,5));
-		//1Çà 4¿­ 5°³·Î ³ª´«´Ù
+		//1í–‰ 4ì—´ 5ê°œë¡œ ë‚˜ëˆˆë‹¤.
 		startBt = new JButton(new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\car\\play.png"));
 		stopBt = new JButton(new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\car\\stop.png"));
 		suspendBt = new JButton(new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\car\\suspend.png"));
@@ -169,7 +169,7 @@ public class KillBug extends JFrame{
 
 		contentPane.add("Center", centerPanel);
 		
-		time_label.setFont(new Font("HYÇìµå¶óÀÎM", Font.BOLD+Font.ITALIC,30));
+		time_label.setFont(new Font("HYí—¤ë“œë¼ì¸M", Font.BOLD+Font.ITALIC,30));
 		
 		centerPanel.add(time_label);
 		time_label.setBackground(Color.pink);
@@ -245,7 +245,7 @@ public class KillBug extends JFrame{
 					score += 1;
 					bugs[i].setVisible(false);
 					if (score == level_control*level) {
-						int answer=JOptionPane.showConfirmDialog(null, "´ÙÀ½ ´Ü°è·Î ³Ñ¾î °¡½Ã°Ú½À´Ï±î?", "Clear!! Congraturation!!", JOptionPane.YES_NO_OPTION);
+						int answer=JOptionPane.showConfirmDialog(null, "ë‹¤ìŒ ë‹¨ê³„ë¡œ ë„˜ì–´ê°€ì‹œê² ìŠµë‹ˆê¹Œ?", "Clear!! Congraturation!!", JOptionPane.YES_NO_OPTION);
 						if (answer==0){
 							level ++;
 							score = 0;
@@ -253,7 +253,7 @@ public class KillBug extends JFrame{
 								//ImageIcon success = new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\bug_catch\\grass.png");  
 								//JOptionPane.ICON_PROPERTY success = new JOptionPane.ICON_PROPERTY();
 										
-								JOptionPane.showConfirmDialog(null, "¸ğµç ´Ü°è¸¦ ¼º°øÇß½À´Ï´Ù!", "Clear!! Congraturation!!", JOptionPane.CLOSED_OPTION);
+								JOptionPane.showConfirmDialog(null, "ëª¨ë“  ë‹¨ê³„ë¥¼ ì„±ê³µí–ˆìŠµë‹ˆë‹¤!", "Clear!! Congraturation!!", JOptionPane.CLOSED_OPTION);
 								contentPane.setVisible(false);
 								level = 1;
 								

@@ -12,14 +12,14 @@ import java.util.TimerTask;
 public class layout extends JPanel{
     static CardLayout card = new CardLayout();
 
-    //ÃÊ±âÈ­¸é
+    //ì´ˆê¸°í™”ë©´
     //JPanel start = new JPanel();
-    //°ÔÀÓÈ­¸é
+    //ê²Œì„í™”ë©´
     KillBug main = new KillBug(1);
-    //°ÔÀÓ ¼º°øÈ­¸é
+    //ê²Œì„ ì„±ê³µí™”ë©´
     //JPanel success = new JPanel();
 
-    //this Panel »ı¼º
+    //this Panel ìƒì„±
     JPanel base = this;
     ImageIcon icon;
     ImageIcon icon2;
@@ -29,11 +29,11 @@ public class layout extends JPanel{
     ImageIcon explain_icon;
 
 
-    //°ÔÀÓ ½ÇÆĞÈ­¸é
+    //ê²Œì„ ì‹¤íŒ¨ í™”ë©´
     static JPanel fail;
     static JPanel success;
 
-    //½ÃÀÛÈ­¸é
+    //ì‹œì‘ í™”ë©´
     public layout() {
         this.setBackground(Color.white);
 
@@ -41,55 +41,55 @@ public class layout extends JPanel{
         //icon2 = new ImageIcon("image/background2.png");
 
 
-        //¹è°æ Panel »ı¼ºÈÄ ÄÁÅÙÃ÷ÆäÀÎÀ¸·Î ÁöÁ¤
+        //ë°°ê²½ Panel ìƒì„± í›„ ì»¨í…ì¸ í˜ì¸ìœ¼ë¡œ ì„¤ì •
         JPanel start = new JPanel(){
             public void paintComponent(Graphics g) {
                 // Approach 1: Dispaly image at at full size
                 g.drawImage(icon.getImage(), 150, 80, 900,700,null);
 
-                setOpaque(false); //±×¸²À» Ç¥½ÃÇÏ°Ô ¼³Á¤,Åõ¸íÇÏ°Ô Á¶Àı
+                setOpaque(false); //ê·¸ë¦¼ì„ í‘œì‹œí•˜ê²Œ ì„¤ì •, íˆ¬ëª…í•˜ê²Œ ì¡°ì ˆ
                 super.paintComponent(g);
 
             }
         };
 
 
-        //¼º°øÈ­¸é
+        //ì„±ê³µí™”ë©´
         success_icon = new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\bug_catch\\success.png");
 
-        //¹è°æ Panel »ı¼ºÈÄ ÄÁÅÙÃ÷ÆäÀÎÀ¸·Î ÁöÁ¤
+        //ë°°ê²½ Panel ìƒì„± í›„ ì»¨í…ì¸ í˜ì¸ìœ¼ë¡œ ì„¤ì •
         JPanel success = new JPanel(){
             public void paintComponent(Graphics g) {
                 // Approach 1: Dispaly image at at full size
                 g.drawImage(success_icon.getImage(), 0, 0, 1000,800,null);
 
-                setOpaque(false); //±×¸²À» Ç¥½ÃÇÏ°Ô ¼³Á¤,Åõ¸íÇÏ°Ô Á¶Àı
+                setOpaque(false); // ê·¸ë¦¼ í‘œì‹œí•˜ê²Œ ì„¤ì •, íˆ¬ëª…í•˜ê²Œ ì¡°ì ˆ
                 super.paintComponent(g);
 
             }
         };
 
-        //½ÇÆĞÈ­¸é
+        //
         fail_icon = new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\bug_catch\\fail.png");
 
-        //¹è°æ Panel »ı¼ºÈÄ ÄÁÅÙÃ÷ÆäÀÎÀ¸·Î ÁöÁ¤
+        //ë°°ê²½ Panel ìƒì„± í›„ ì»¨í…ì¸ í˜ì¸ìœ¼ë¡œ ì„¤ì •
         JPanel fail = new JPanel(){
             public void paintComponent(Graphics g) {
                 // Approach 1: Dispaly image at at full size
                 g.drawImage(fail_icon.getImage(), 0, 0, 1000,800,null);
 
 
-                setOpaque(false); //±×¸²À» Ç¥½ÃÇÏ°Ô ¼³Á¤,Åõ¸íÇÏ°Ô Á¶Àı
+                setOpaque(false); // ê·¸ë¦¼ í‘œì‹œí•˜ê²Œ ì„¤ì •, íˆ¬ëª…í•˜ê²Œ ì¡°ì ˆ
                 super.paintComponent(g);
             }
 
 
         };
 
-        //·¹ÀÌ¾Æ¿ôÀº CardLayout
+        //ë ˆì´ì•„ì›ƒì€ CardLayout
 
 
-        //·¹ÀÌ¾Æ¿ô Àû¿ë
+        //ë ˆì´ì•„ì›ƒ ì ìš©
         this.setLayout(card);
 
         start.setBackground(Color.green);
@@ -99,36 +99,36 @@ public class layout extends JPanel{
 
         //MouseHandler handler = new MouseHandler();
         icon2 = new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\bug_catch\\startButtonBasic.png");
-        //¹öÆ°À» ¸¸µì´Ï´Ù.
+        //ë²„íŠ¼ì„ ë§Œë“­ë‹ˆë‹¤.
         JButton start_button = new JButton("Start",icon2);
-        //¹öÆ°¿¡ ÀÌº¥Æ® Ãß°¡
+        //ë²„íŠ¼ì— ì´ë²¤íŠ¸ ì¶”ê°€
         start_button.addActionListener(new MyEventListener());
 
         icon3 = new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\bug_catch\\quitButtonBasic.png");
-        //¹öÆ°À» ¸¸µì´Ï´Ù.
+        // ë²„íŠ¼ì„ ë§Œë“­ë‹ˆë‹¤.
         JButton quit_button = new JButton("Quit",icon3);
-        //¹öÆ°¿¡ ÀÌº¥Æ® Ãß°¡
+        // ë²„íŠ¼ì— ì´ë²¤íŠ¸ ì¶”ê°€
         quit_button.addActionListener(new MyEventListener());
 
-        //Å×½ºÆ®¿ë ¼º°ø ¹öÆ°
+        // í…ŒìŠ¤íŠ¸ìš© ì„±ê³µ ë²„íŠ¼
         JButton success_button = new JButton("Success");
         success_button.addActionListener(new MyEventListener());
 
-        //Å×½ºÆ®¿ë ½ÇÆĞ ¹öÆ°
+        // í…ŒìŠ¤íŠ¸ìš© ì‹¤íŒ¨ ë²„íŠ¼
         JButton fail_button = new JButton("Fail");
         fail_button.addActionListener(new MyEventListener());
 
 
-        //µµ¿ò¸» ¹öÆ°
-        JButton guide_button = new JButton("µµ¿ò¸»");
+        //ë„ì›€ë§ ë²„íŠ¼
+        JButton guide_button = new JButton("ë„ì›€ë§");
         guide_button.addActionListener(new MyEventListener());
 
 
-        //success È­¸é°ú failÈ­¸é¿¡ µ¹¾Æ°¡±â ¹öÆ°À» Ãß°¡ÇÕ´Ï´Ù.
-        JButton s_back_button = new JButton("µ¹¾Æ°¡±â");
+        //success í™”ë©´ê³¼ fail í™”ë©´ì— ëŒì•„ê°€ê¸° ë²„íŠ¼ì„ ì¶”ê°€
+        JButton s_back_button = new JButton("ëŒì•„ê°€ê¸°");
         s_back_button.addActionListener(new MyEventListener());
 
-        JButton f_back_button = new JButton("µ¹¾Æ°¡±â");
+        JButton f_back_button = new JButton("ëŒì•„ê°€ê¸°");
         f_back_button.addActionListener(new MyEventListener());
 
         success.add(s_back_button);
@@ -186,8 +186,8 @@ public class layout extends JPanel{
     class MyEventListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("event µé¾î¿È");
-            // »ç¿ëÀÚ°¡ Load ¸Ş´º¾ÆÀÌÅÛÀ» ¼±ÅÃÇÏ´Â °æ¿ì Ã³¸®ÇÒ ÀÛ¾÷ ±¸Çö
+            System.out.println("event ë“¤ì–´ì˜´");
+            // ì‚¬ìš©ìê°€ Load ë©”ë‰´ì•„ì´í…œì„ ì„ íƒí•˜ëŠ” ê²½ìš° ì²˜ë¦¬í•  ì‘ì—… êµ¬í˜„
 
             if (e.getActionCommand() == "Start")
             {
@@ -204,20 +204,20 @@ public class layout extends JPanel{
                 card.show(base, "Fail");
             }
 
-            else if(e.getActionCommand() == "µ¹¾Æ°¡±â")
+            else if(e.getActionCommand() == "ëŒì•„ê°€ê¸°")
             {
                 card.show(base, "Start");
             }
 
-            else if(e.getActionCommand() == "µµ¿ò¸»")
+            else if(e.getActionCommand() == "ë„ì›€ë§")
             {
                 JFrame help_f = new JFrame();
-                help_f.setTitle("µµ¿ò¸»");
-                // ÁÖÀÇ, ¿©±â¼­ setDefaultCloseOperation() Á¤ÀÇ¸¦ ÇÏÁö ¸»¾Æ¾ß ÇÑ´Ù
-                // Á¤ÀÇÇÏ°Ô µÇ¸é »õ Ã¢À» ´İÀ¸¸é ¸ğµç Ã¢°ú ÇÁ·Î±×·¥ÀÌ µ¿½Ã¿¡ ²¨Áø´Ù
+                help_f.setTitle("ë„ì›€ë§");
+                // ì£¼ì˜, ì—¬ê¸°ì„œ setDefaultCloseOperation() ì •ì˜ë¥¼ í•˜ì§€ ë§ì•„ì•¼ í•œë‹¤
+                // ì •ì˜í•˜ê²Œ ë˜ë©´ ìƒˆ ì°½ì„ ë‹«ìœ¼ë©´ ëª¨ë“  ì°½ê³¼ í”„ë¡œê·¸ë¨ì´ ë™ì‹œì— êº¼ì§„ë‹¤.
 
                 explain_icon = new ImageIcon("image/explain2.png");
-                //JLabel NewLabel = new JLabel("*IT Cafe °ÔÀÓ¹æ¹ı*");
+                //JLabel NewLabel = new JLabel("*IT Cafe ê²Œì„ë°©ë²•*");
                 //NewLabel.setBackground(Color.white);
                 JPanel NewWindowContainer = new JPanel() {
                     public void paintComponent(Graphics g) {
@@ -225,7 +225,7 @@ public class layout extends JPanel{
                         g.drawImage(explain_icon.getImage(), 0, 0, null);
 
 
-                        setOpaque(false); //±×¸²À» Ç¥½ÃÇÏ°Ô ¼³Á¤,Åõ¸íÇÏ°Ô Á¶Àı
+                        setOpaque(false); // ê·¸ë¦¼ì„ í‘œì‹œí•˜ê²Œ ì„¤ì •, íˆ¬ëª…í•˜ê²Œ ì¡°ì ˆ
                         super.paintComponent(g);
 
                     }
@@ -327,7 +327,7 @@ public class layout extends JPanel{
     	JPanel centerPanel;
        
     	BufferedImage img = null;
-    	// ÀÏ´Ü ¹Ù´ÚÂÊ¿¡
+    	// ì¼ë‹¨ ë°”ë‹¥ìª½ì—
     	int img_x = 800;
     	int img_y = 800;
     	Thread[] ths;
@@ -339,7 +339,7 @@ public class layout extends JPanel{
     	{
     		//super("Bug Catching Game");	
     		
-    		// Å¸ÀÌ¸Ó ½º·¹µåµµ Ãß°¡
+    		// íƒ€ì´ë¨¸ ìŠ¤ë ˆë“œë„ ì¶”ê°€
     		//ths = new Thread[bugs.length*2];
     		ths = new Thread[bugs.length*2 + 1];
     		
@@ -368,7 +368,7 @@ public class layout extends JPanel{
     		scrollPane = new JScrollPane(centerPanel);
     		menuPanel = new JPanel();
     		menuPanel.setLayout(new GridLayout(1,4,5,5));
-    		//1Çà 4¿­ 5°³·Î ³ª´«´Ù
+    		//1ì—´ 4í–‰ 5ê°œë¡œ ë‚˜ëˆˆë‹¤
     		startBt = new JButton(new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\car\\play.png"));
     		stopBt = new JButton(new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\car\\stop.png"));
     		suspendBt = new JButton(new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\car\\suspend.png"));
@@ -392,7 +392,7 @@ public class layout extends JPanel{
 
     		contentPane.add("Center", centerPanel);
     		
-    		time_label.setFont(new Font("HYÇìµå¶óÀÎM", Font.BOLD+Font.ITALIC,30));
+    		time_label.setFont(new Font("HYí—¤ë“œë¼ì¸M", Font.BOLD+Font.ITALIC,30));
     		
     		centerPanel.add(time_label);
     		time_label.setBackground(Color.pink);
@@ -471,7 +471,7 @@ public class layout extends JPanel{
     						for(Thread ts:ths){
     	    					ts.stop();
     						}
-    						int answer=JOptionPane.showConfirmDialog(null, "´ÙÀ½ ´Ü°è·Î ³Ñ¾î °¡½Ã°Ú½À´Ï±î?", "Clear!! Congraturation!!", JOptionPane.YES_NO_OPTION);
+    						int answer=JOptionPane.showConfirmDialog(null, "ë‹¤ìŒë‹¨ê³„ë¡œ ë„˜ì–´ê°€ì‹œê² ìŠµë‹ˆê¹Œ?", "Clear!! Congraturation!!", JOptionPane.YES_NO_OPTION);
     						if (answer==0){
     							level ++;
     							score = 0;
@@ -479,7 +479,7 @@ public class layout extends JPanel{
     								//ImageIcon success = new ImageIcon("C:\\Users\\admin\\eclipse-workspace\\HW\\src\\bug_catch\\grass.png");  
     								//JOptionPane.ICON_PROPERTY success = new JOptionPane.ICON_PROPERTY();
     										
-    								JOptionPane.showConfirmDialog(null, "¸ğµç ´Ü°è¸¦ ¼º°øÇß½À´Ï´Ù!", "Clear!! Congraturation!!", JOptionPane.CLOSED_OPTION);
+    								JOptionPane.showConfirmDialog(null, "ëª¨ë“  ë‹¨ê³„ë¥¼ ì„±ê³µí–ˆìŠµë‹ˆë‹¤!", "Clear!! Congraturation!!", JOptionPane.CLOSED_OPTION);
     								contentPane.setVisible(false);
     								card.show(base, "Success");
     								level = 1;
@@ -525,7 +525,7 @@ public class layout extends JPanel{
     	
     	public timer (JFrame _app, int w, int h) {
     		app = _app;
-    		this.setText("Á¦ÇÑ½Ã°£ : " + String.valueOf(rest_time));
+    		this.setText("ì œí•œì‹œê°„ : " + String.valueOf(rest_time));
     		x = w;
     		y = h;
     	}
@@ -537,7 +537,7 @@ public class layout extends JPanel{
     			rest_time -= 1;
     			System.out.println(rest_time+ "  "+ System.currentTimeMillis()+ "   " +start_time);
     			
-    			this.setText("Á¦ÇÑ ½Ã°£ : " +String.valueOf(rest_time));
+    			this.setText("ì œí•œì‹œê°„ : " +String.valueOf(rest_time));
     			//this.setBounds(x,y,50,50);
     			
     			try {
@@ -547,7 +547,7 @@ public class layout extends JPanel{
     				e.printStackTrace();
     			}
     			if (rest_time <= 0) {
-    				JOptionPane.showConfirmDialog(null, "½Ã°£ÃÊ°ú", "Lose.....", JOptionPane.CLOSED_OPTION);
+    				JOptionPane.showConfirmDialog(null, "ì‹œê°„ì´ˆê³¼", "Lose.....", JOptionPane.CLOSED_OPTION);
     				card.show(base, "Fail");
     				break;
     			}
