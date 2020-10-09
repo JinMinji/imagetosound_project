@@ -27,10 +27,10 @@ public class Bug2 extends JButton implements Runnable{
 	}
    
 	public void run() {
-		// TODO x, y °ªÀ» ¹Ş¾Æ¼­ ¹Ù²ãÁà¾ßÇÔ.
-		// ¸ó½ºÅÍ°¡ ´Ş¸®´Â ºÎºĞ
+		// TODO x, y ê°’ì„ ë°›ì•„ì„œ ë°”ê¿”ì¤˜ì•¼í•¨
+		// ì›€ì§ì´ëŠ” ë¶€ë¶„
 		for (int i=0 ; i < 10000 ; i++) {
-			// ¿©±â¼­ ¹İº¹¹® break Á¶°ÇÀ» ½Ã°£Á¦ÇÑÀ¸·Î ÁÖ¸é µÉ µí
+			// ì—¬ê¸°ì„œ ë°˜ë³µë¬¸ break ì¡°ê±´ì„ ì‹œê°„ì œí•œìœ¼ë¡œ ì£¼ë©´ ë  ë“¯
 			speed = (int)(Math.random() * 50);
 			int move = speed % 4;
 			if (move == 0 ) {
@@ -45,15 +45,15 @@ public class Bug2 extends JButton implements Runnable{
 				x += speed;
 				y += speed;
 			}
-			// ¸ó½ºÅÍ ¿òÁ÷ÀÌ°Ô ÇÏ´Â ºÎºĞ
+			// ë²Œë ˆ ì›€ì§ì´ê²Œ í•˜ëŠ” ë¶€ë¶„
 			this.setBounds(x,y,50,50);
-			// ¸ó½ºÅÍ ¸¶´Ù ¼­·Î ´Ù¸¥ ÀÓÀÇÀÇ ÀÎÅÍ¹úÀ» °¡Áø´Ù.
+			// ë²Œë ˆë§ˆë‹¤ ì„œë¡œ ë‹¤ë¥¸ ì„ì˜ì˜ ì¸í„°ë²Œì„ ê°€ì§€ê²Œ í•œë‹¤.
 			try {
 				Thread.sleep((int)(Math.random()*400));
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}// ÀâÁö ¸øÇßÀ» ‹š 
+		}// ì¡ì§€ ëª»í–ˆì„ ë•Œ
 	}
 }

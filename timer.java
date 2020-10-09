@@ -14,7 +14,7 @@ public class timer extends JLabel implements Runnable{
 	
 	public timer (JFrame _app, int w, int h) {
 		app = _app;
-		this.setText("Á¦ÇÑ½Ã°£ : " + String.valueOf(rest_time));
+		this.setText("ì œí•œì‹œê°„ : " + String.valueOf(rest_time));
 		x = w;
 		y = h;
 	}
@@ -26,7 +26,7 @@ public class timer extends JLabel implements Runnable{
 			rest_time -= 1;
 			System.out.println(rest_time+ "  "+ System.currentTimeMillis()+ "   " +start_time);
 			
-			this.setText("Á¦ÇÑ ½Ã°£ : " +String.valueOf(rest_time));
+			this.setText("ì œí•œì‹œê°„ : " +String.valueOf(rest_time));
 			//this.setBounds(x,y,50,50);
 			
 			try {
@@ -36,7 +36,7 @@ public class timer extends JLabel implements Runnable{
 				e.printStackTrace();
 			}
 			if (rest_time <= 0) {
-				JOptionPane.showConfirmDialog(null, "½Ã°£ÃÊ°ú", "Lose.....", JOptionPane.CLOSED_OPTION);
+				JOptionPane.showConfirmDialog(null, "ì‹œê°„ì´ˆê³¼", "Lose.....", JOptionPane.CLOSED_OPTION);
 				break;
 			}
 			
